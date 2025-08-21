@@ -10,7 +10,10 @@ class CompanyViewSet(viewsets.ModelViewSet):
     # Get all companies for the authenticated user
     def get_queryset(self):
         user = self.request.user
-        return Company.objects.filter(user=user)
+        if user.is_superuser:
+            return Company.objects.all()
+        else:
+            return Company.objects.filter(user=user)
 
     # Create a new company for the authenticated user
     def perform_create(self, serializer):
