@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "insecure-default")
 DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
 
 # Render's url
-ALLOWED_HOSTS = ["job-search-helper-fndk.onrender.com/",] 
+ALLOWED_HOSTS = ["job-search-helper-fndk.onrender.com",] 
 
 
 # Application definition
@@ -131,7 +131,7 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
+    # "http://localhost:3000",
     "https://your-job-search-helper.vercel.app"
 ]
 
