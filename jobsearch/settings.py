@@ -26,8 +26,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "insecure-default")
 DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
 
-# For now
-ALLOWED_HOSTS = ["*",] 
+# Render's url
+ALLOWED_HOSTS = ["https://job-search-helper-fndk.onrender.com/",] 
 
 
 # Application definition
