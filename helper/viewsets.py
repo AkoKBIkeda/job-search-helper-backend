@@ -18,4 +18,5 @@ class CompanyViewSet(viewsets.ModelViewSet):
     # Create a new company for the authenticated user
     def perform_create(self, serializer):
         user = self.request.user
+        print(user)
         serializer.save(user=user)

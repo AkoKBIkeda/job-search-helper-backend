@@ -7,7 +7,7 @@ class Company(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)  # When user is deleted, all records will be deleted too
     name = models.CharField(max_length=30)  # Only required field in the model to save the company to allow research later
     address = models.CharField(max_length=255, blank=True, null=True)
-    url = models.URLField(blank=True, null=True)
+    website = models.URLField(max_length=100, blank=True, null=True)
     job_title = models.CharField(max_length=30, blank=True, null=True)  # E.g., frontend developer
     work_mode = models.CharField(
         max_length=6, 
