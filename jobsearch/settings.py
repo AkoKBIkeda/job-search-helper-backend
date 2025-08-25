@@ -28,7 +28,12 @@ SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "insecure-default")
 DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
 
 # Render's url
-ALLOWED_HOSTS = ["job-search-helper-fndk.onrender.com",] 
+ALLOWED_HOSTS = [
+    "job-search-helper-fndk.onrender.com",
+    "your-job-search-helper.vercel.app",
+    "localhost",
+    "127.0.0.1"
+]
 
 
 # Application definition
